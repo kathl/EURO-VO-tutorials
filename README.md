@@ -1,6 +1,3 @@
-# hello-world
-just another repository
+# EURO-VO tutorials 
 
-Hi humans!
-
-Hubot here, I like a coffee. I've had tacos on the moon and find them far superior to Earth tacos. 
+This repository will contain the scientific tutorials from the EURO-VO webpage (http://www.euro-vo.org/?q=science/scientific-tutorials) rewritten in python and presented as jupyter notebooks. 

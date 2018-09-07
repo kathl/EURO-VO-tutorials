@@ -79,11 +79,8 @@ last update \today
 \end{center}
 
 
-\vspace{0.5cm}
-\begin{center} \includegraphics[width=0.13 
-\textwidth]{../images/logo_cdsv2.jpg}  \hspace{10cm} 
-\includegraphics[width=0.18 
-\textwidth]{../images/logo_observatoire.jpg}\end{center}
+\vspace{3.5cm}
+Template by Jenny G. Source
 
 
 \newpage
@@ -172,7 +169,8 @@ information on this object in a new tab.
 drawn for the literature and are stored in \simbad\ using a 
 hierarchical classification scheme. The full list of Object Types can 
 be found here: 
-\hyperref[http://simbad.u-strasbg.fr/simbad/sim-display?data=otypes]{\textcolor{blue}{http://simbad.u-strasbg.fr/simbad/sim-display?data=otypes}}.
+\hyperref[http://simbad.u-strasbg.fr/simbad/sim-display?data=otypes]
+{\textcolor{blue}{http://simbad.u-strasbg.fr/simbad/sim-display?data=otypes}}.
 The main Object Type of NGC4039 is \textbf{Galaxy in Pairs of Galaxies 
 (GiP)}.
     \item Use the {\bf parents} button \includegraphics[width=0.07 
@@ -181,7 +179,7 @@ of the galaxy pair. Sorting by the number of references
 \includegraphics[width=0.04  \textwidth]{../images/simbad_sort_references.jpg} 
 can help 
 bring out the most important ones. 
-    \item Follow the link to the \simbad\ entry of the Antennae galaxies 
+    \item Follow the link to the \simbad\ entry of the Antennae galaxy pair 
 \includegraphics[width=0.07 
 \textwidth]{../images/simbad_antennae-galaxt-pair_link.png}. There 
 click on the {\bf children} button \includegraphics[width=0.07 
@@ -310,8 +308,8 @@ in the tutorial.
 \section{Search for data on NGC4039 in \aladin}
 
 Open \aladin\ with at least 1GB memory allocated to the save virtual 
-machine. To do so use the following command line: ` java -Xmx1024m -jar 
-Aladin.jar '
+machine. To do so use the following command line: \texttt{java -Xmx1024m -jar 
+Aladin.jar}
 
 Aladin offers two ways to retrieve data: through the \textsc{Data Tree} on the 
 left hand side of the \aladin\ window and through the 
@@ -378,21 +376,15 @@ belonging to a row in the table blinks in the main viewing window when
 hoovering over the table row with the mouse.
 
     \item In the \textsc{Data Tree}, go to \textbf{Images $\rightarrow$ 
-Infrared $\rightarrow$ 2MASS} and load the 2MASS colour image. Use the 
-opacity slider \includegraphics[width=0.035  
+Infrared $\rightarrow$ 2MASS} and load the 2MASS colour image. If the box next 
+to the DSS image is ticked, you can use the opacity slider 
+\includegraphics[width=0.035  
 \textwidth]{../images/aladin_button_opacity.png} next to the 2MASS plane in the 
-image stack to change the opacity of the 2MASS image and to compare it to the 
-DSS image. 
-%In order to view a RGB image of the 2MASS data you have two options:
-%    \begin{enumerate}
-%        \item Load the \textbf{2MASS J, H and K} bands images in the 
-%        \textsc{Data Tree} by clicking on their entry, ticking the box 
-%        \textbf{progressive} in the pop-up window and then clicking 
-%        \textbf{Load} (see Figure~\ref{fig:aladin_load_2mass}). Then construct 
-%a color image with the \textbf{rgb} tool \includegraphics[width=0.03  
-%        \textwidth]{../images/rgb.jpg}.
-%        \item Load the 2MASS colour image. 
-%    \end{enumerate} 
+image stack to change its opacity and thus compare it to the 
+DSS image. Note that the different layers in the stack are displayed in the 
+main window as if you are looking through the stack from top to bottom. Hence, 
+if  you wanted to overlay the DSS image on the 2MASS image, you would have to 
+change their order in the stack by drag-and drop. 
 
 \begin{figure}[H]
     \center
@@ -416,7 +408,7 @@ images in a number of different ways:
         \item Transparency overlays: return to single view mode. Change the 
         transparency of planes in the stack with the opacity sliders         
         \includegraphics[width=0.04  
-        \textwidth]{../images/aladin_button_opacity.png} as before. Note 
+        \textwidth]{../images/aladin_button_opacity.png} as before. Remember  
         that you can move the location of the planes in the stack and thus 
         change the order in which the image are shown.
     \end{itemize}
@@ -459,14 +451,17 @@ galaxies that have SDSS and GALEX data}
 
 Many large sky surveys in \aladin\ are stored in the \textbf{HiPS} format
 (Hierarchical Progressive Survey, see 
-\hyperref[http://aladin.u-strasbg.fr/hips/]{\textcolor{blue}{http://aladin.u-strasbg.fr/hips/}},
+\hyperref[http://aladin.u-strasbg.fr/hips/]{\textcolor{blue}
+	{http://aladin.u-strasbg.fr/hips/}}),
 which allows for easy access, browsing and visualisation of image and catalogue 
 data. To describe (non-trivially shaped) regions on the sky \textbf{MOC} 
 (Multi-Order Coverage) maps are used. In the following, we will make use of the 
 advantages of these two data structures to easily asses which galaxies in the 
 Arp catalogue of peculiar galaxies have been observed by SDSS and GALEX. If you 
-would like to have an overview of the HiPS exist have a look at 
-\hyperref[https://aladin.u-strasbg.fr/hips/list]{\textcolor{blue}{https://aladin.u-strasbg.fr/hips/list}}
+would like to have an overview of currently available HiPS, have a look at 
+\hyperref[https://aladin.u-strasbg.fr/hips/list]{\textcolor{blue}
+	{https://aladin.u-strasbg.fr/hips/list}}. You can load any of the in 
+\aladin\ by entering their base URL in the \textbf{Command} line.  
 
 \begin{itemize}
     \item Select the \textbf{SDSS 9 colored} (\textbf{Image $\rightarrow$ 
@@ -500,8 +495,8 @@ coverage of the surveys.
     \item Calculate the intersection of the coverage maps of the SDSS and 
 GALEX surveys using in the menu the item \textbf{Coverage $\rightarrow$ 
 Logical operations} or the MOC button 
-\includegraphics[width=0.035\textwidth]{../images/aladin_button_moc.png} right 
-of the main viewing window. 
+\includegraphics[width=0.035\textwidth]{../images/aladin_button_moc.png} on the 
+right of the main viewing window. 
 
 \begin{figure}[H]
 \center
@@ -511,10 +506,19 @@ of the main viewing window.
 \end{figure}
 
     \item Load the full Webb 1996 Arp catalog that you saved earlier. You 
-can do this in one of the two ways:
+can do this in one of the following three ways:
     \begin{itemize}
-        \item \textbf{File $\rightarrow$ Load local file... }
-        \item drag and drop on the images
+        \item \textbf{File $\rightarrow$ Load local file... }.
+        \item Drag and drop on the images.
+        \item Broadcast the catalogue from the \vizier\ page that shows the 
+        HTML version of the table or \textbf{MyData} area of the CDS Portal. To 
+        do so click on \includegraphics[width=0.035\textwidth]
+        {../images/vizier_button_broadcast.png} 
+        or \includegraphics[width=0.035\textwidth]
+        {../images/cdsportal_button_broadcast.png} respectively and allow the 
+        browser to connect to the SAMP hub. For \vizier\ you additionally have 
+        to click on the newly appeared grey \textbf{Broadcast} button. Now the 
+        data appears in \aladin. 
     \end{itemize}
 Alternatively you can download the catalogue from \vizier\ through the 
 \textsc{Data Tree}, enter "Arp Webb" in the \textbf{Select} line below the 
@@ -538,7 +542,7 @@ sources by extracting small images from the SDSS survey:
 
     \begin{itemize}
         \item Select the brightest galaxies using the \textbf{filter} tool  
-        \textbf{grid} \includegraphics[width=0.04\textwidth]
+        \includegraphics[width=0.04\textwidth]
         {../images/aladin_button_filter.png}: select the 
         \textbf{Show brightest stars} predefined filter and edit it with the 
         \textbf{Advanced mode} to select object with magnitude below 9. Note 

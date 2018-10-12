@@ -288,10 +288,14 @@ J2000 decimal degrees and to obtain the whole catalog:
     \end{figure}
     \item Submit again.
 \end{itemize}
-
+\end{itemize}
+The following steps are optional for the workflow of this tutorial, but they 
+might come in handy for other problem sets. 
+\begin{itemize}
 \item When satisfied, click on \textbf{Save in CDSportal}, then click 
 on the \textbf{Save} button. The file is now saved in your personal 
-user space on the CDS portal.
+user space on the CDS portal.\includegraphics[width=0.1  
+\textwidth]{../images/vizier_saveto_CDSportal.png}
 \item Click on \textbf{Go to MyData} and download a copy in 
 \textbf{VOTable} format on your desktop. This file will be used later 
 in the tutorial.
@@ -575,61 +579,23 @@ $\rightarrow$ Thumbnail view generator...}, set the thumbnail size to
 
 
 
-\section{Collect information on a sample of galaxies using \aladin\ 
-[Optional]}
-
-Use an \aladin\ script to obtain DSS and SDSS image with HST, Chandra, ESO 
-observation log overlays for each of the selected bright galaxies.
+\section{Compare Arp's peculiar galaxies to the broader galaxy population}
 
 \begin{itemize}
-\item Copy the script Arp\_script.ajs from the url 
-\begin{tiny}\textcolor{white}{\url{http://cds.unistra.fr/tutorials/CDS-tutorial/Arp_script.ajs}}
-\end{tiny} \hspace{-7.7cm} 
-\textcolor{blue}{http://cds.unistra.fr/tutorials/CDS-tutorial/Arp\_script.ajs}
-to your computer. The content of the script is shown in Figure 
-\ref{fig:script}
-\item Create a folder called `Arp' and edit the script Arp\_script.ajs 
-to insert a path in order to save the output files, e.g. 
-$\sim$/Desktop/Arp.
-\item Open the \aladin\ macro controller and load the script:\\
-- \textbf{Tools $\rightarrow$ Macro Controller} then \textbf{File 
-$\rightarrow$ Load script}\\
-- or cut and paste the script into the top panel of the \textsc{Macros} 
-window.
-\item Select all the sources in the bright galaxy catalog:\\
-- Right click on the plane and \textbf{Select all objects in the 
-selected planes}\\
-- In the \textsc{Macros} window: \textbf{File $\rightarrow$ Use 
-selected plane sources as params}.\\
-- Note how the catalog columns are shown as parameters which can be 
-referred to as \$1, \$2, etc within the script.
-\item Click on the first row of the parameters table and execute the 
-script for this row: \textbf{Exec current params}.
-\item Optional: add an SDSS image: remove the `\#' to enable download 
-of a SDSS g-band image for each source. Note that this results in an 
-\textbf{Could not find any data corresponding to your request} message 
-for objects not covered by SDSS.
-\item Inspect the output in the \aladin\ window and also the files 
-written in the Arp folder.
-\item Execute the script for all sources: \textbf{Exec all from 
-current}.
-\item Note that the saved stack files can simply be dragged and dropped 
-into \aladin\ for inspection.
+	\item load the sample and aperture photometry list of the Dustpedia 
+	catalogue (Clark et al) cross-match them, use the advanced options to not 
+	keep all of the columns. Only keep Name RAJ200, DEJ2000 from either of the 
+	tables, FNUV, Fr and FKs from the apphot and Distcorr from the sample 
+	table. 
+	\item add columns: NUV-r colour, expression: \\
+	 \texttt{\$\{FNUV\}/\$\{Fr\}}, $\rightarrow$ convert to mags first
+	Kabs, expression: \\
+	\texttt{-2.5*log(\$\{FKs\}/666.7)-5*(log(\$\{Distcorr*1000000\})-1)}
+	\item plot and marvel
+	\item find out how to adjust the x and y axis range independently otherwise 
+	things seem to work nicely :) 
+	
 \end{itemize}
-
-\begin{figure}[H]
-\center
-\includegraphics[width=0.38 
-\textwidth]{../images/aladin_macrocontroller_cdstutorial.jpg}\hspace{0.3cm}\includegraphics[width=0.6
-\textwidth]{../images/aladin_script_arp.jpg}
-\caption{\textsc{Macros} window \& Arp\_script.ajs }
-\label{fig:script}
-\end{figure}
-
-%\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for 
-%formatting the Bibliography
-%\bibliography{Bibliography}
-
 
 \end{document}
 

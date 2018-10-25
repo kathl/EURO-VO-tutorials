@@ -102,13 +102,13 @@ The CDS harbours three major programs, accessible through the CDS portal:\\
 coordinates, proper motion, radial velocity, spectral type, distance, 
 magnitude), cross-correlations and bibliography.
 \item \includegraphics[width=0.08  \textwidth]{../images/logo_vizier.png}  
-\textbf{\vizier}: The \vizier\ catalog service provides access to about 
-15,000 catalogs, being the most complete library of published astronomical 
+\textbf{\vizier}: The \vizier\ catalogue service provides access to about 
+15,000 catalogues, being the most complete library of published astronomical 
 data tables available online.
 \item \includegraphics[width=0.1  \textwidth]{../images/logo_aladin.png} 
 \textbf{\aladin}: The interactive sky atlas \aladin\ allows to 
 visualize astronomical images and to superimpose entries from different 
-catalogs and databases. It allows to visualize \simbad\ and \vizier\ 
+catalogues and databases. It allows to visualize \simbad\ and \vizier\ 
 information and distributed archives and databases as well as to upload own 
 tables or images. There are two versions of \aladin: Aladin desktop and Aladin 
 lite which runs in the browser.
@@ -184,7 +184,8 @@ bring out the most important ones.
 \textwidth]{../images/simbad_antennae-galaxt-pair_link.png}. There 
 click on the {\bf children} button \includegraphics[width=0.07 
 \textwidth]{../images/simbad_button_children.png} to identify the name 
-of the two galaxies making up the galaxy pair. 
+of the two galaxies making up the galaxy pair. Again the number of references 
+might help to find them.  
     \item Visit the \simbad\ entry of the interaction partner of NGC\,4039 and 
 use the {\bf References} section to find the earliest listed reference in the 
 literature to this object.
@@ -215,7 +216,8 @@ literature to this object.
 
 \begin{itemize}
 \item A DSS (Digitized Sky Survey) image of NGC4039 is shown.
-\item Note that you can zoom on the image by scrolling your mouse. 
+\item Note that you can zoom in and out by scrolling your mouse when the mouse 
+pointer is positioned on top of the images. 
 \item Other images can be displayed by selecting them in the left 
 column. 
 \item Restricted searches on wavelength and resolution are possible by 
@@ -223,7 +225,7 @@ ticking/unticking the boxes in that same column.
 \end{itemize}
 
 
-\subsection{\vizier\ - Catalogs}
+\subsection{\vizier\ - Catalogues}
 
 
 \begin{figure}[H]
@@ -235,18 +237,18 @@ ticking/unticking the boxes in that same column.
 \end{figure}
 
 \begin{itemize}
-\item The list of catalogs is sorted by \textbf{Popularity} but can 
+\item The list of catalogues is sorted by \textbf{Popularity} but can 
 also be sorted by number of rows (\textbf{\#rows}), \textbf{sky 
 fraction} or \textbf{year}. 
 \item Note that restrictions and filtering can be applied by clicking 
 on the left or right columns according to your wills.
-\item Selecting a catalog, it is then possible to visualize it (either 
+\item After selecting a catalogue, it is possible to visualize it (either 
 quickly or in \vizier), to plot it and/or to send it to the \aladin\ 
 tool.
 \begin{figure}[H]
 \center
 \includegraphics[width=1  \textwidth]{../images/cdsportal_table_usno.jpg}
-\caption{Selection of a \vizier\ Catalog on the CDS Portal.}
+\caption{Selection of a \vizier\ Catalogue on the CDS Portal.}
 \label{fig:cdsportal5}
 \end{figure}
 \item Actually the Antennae is listed in the Arp Atlas of Peculiar 
@@ -256,7 +258,7 @@ Galaxies, make a search for `Arp' into the \textbf{Search} box.
 \center
 \includegraphics[width=0.6  
 \textwidth]{../images/cdsportal_search-table_arp.jpg}
-\caption{Looking for `Arp' in the \vizier\ catalogs.}
+\caption{Looking for `Arp' in the \vizier\ catalogues.}
 \label{fig:arp}
 \end{figure}
 \item Note that there are two tables for Webb 1996. Select the 
@@ -268,7 +270,7 @@ page.
 \item Make a first query on this table by clicking on \textbf{submit}. 
 Examine the output as html. Go back to the previous page
 \item Modify the query preferences to add extra coordinate columns in 
-J2000 decimal degrees and to obtain the whole catalog:
+J2000 decimal degrees and to obtain the whole catalogue:
 \begin{itemize}
     \item Remove the restriction on searching only around `NGC4039' by clicking 
     on the \textbf{Clear} button below \textbf{Target Name (resolved by 
@@ -278,7 +280,7 @@ J2000 decimal degrees and to obtain the whole catalog:
     \textbf{decimal} boxes.
     \item Change the maximum (\textbf{max}) number of rows to 
     \textbf{unlimited} and tick \textbf{All columns} to get the whole 
-    catalog.
+    catalogue
     \begin{figure}[H]
         \center
         \includegraphics[width=0.2  
@@ -297,7 +299,7 @@ on the \textbf{Save} button. The file is now saved in your personal
 user space on the CDS portal.\includegraphics[width=0.1  
 \textwidth]{../images/vizier_saveto_CDSportal.png}
 \item Click on \textbf{Go to MyData} and download a copy in 
-\textbf{VOTable} format on your desktop. This file will be used later 
+\textbf{VOTable} format on your desktop. This file can be used later 
 in the tutorial.
 \begin{figure}[H]
 \center
@@ -307,7 +309,17 @@ in the tutorial.
 \end{figure}
 \end{itemize}
 
-
+\subsection{How does the data get into the CDS databases?}
+As you have seen in the last sections, the CDS databases (\simbad, \vizier, the 
+HiPS server for images) host large amounts of a variety of data products. But 
+how does the data published in papers find their way into the databases? At the 
+CDS, about 12 documentalists work on curating data. This involves collecting 
+data from journal papers, receiving data directly from large surveys (such as 
+e.\,g. Gaia), assessing and assuring the data quality and cross-matching 
+sources described by newly published papers/data with sources already available 
+in the databases. You can make this a smooth process by making sure that all 
+sources in your papers appear with correct coordinates and names already known 
+by \simbad. 
 
 \section{Search for data on NGC4039 in \aladin}
 
@@ -369,26 +381,28 @@ filter} (see Figure~\ref{fig:server_selector}).
 
     \item Change the colour of the \simbad\ plane using the button 
 \textbf{Properties} 
-\includegraphics[width=0.03\textwidth]{../images/aladin_button_properties.png}  
+\includegraphics[width=0.03\textwidth]{../images/aladin_button_properties.png}. 
+ 
 
     \item Using the \textbf{Select} tool \includegraphics[width=0.03  
 \textwidth]{../images/aladin_button_select.png}, select some of the \simbad\ 
-points and note that these are displayed as a table below the image. This 
-window can be detached with the icon \includegraphics[width=0.035  
-\textwidth]{../images/aladin_button_detach-table.png}. Note that the data point 
+points either by clicking on one point or by holding the left mouse button and 
+drawing a rectangle. The sources within the rectangle are then selected and 
+displayed as a table below the image. This window can be detached with the icon 
+\includegraphics[width=0.035  
+\textwidth]{../images/aladin_button_detach-table.png} in the bottom right 
+corner of the table window. Note that the data point 
 belonging to a row in the table blinks in the main viewing window when 
 hoovering over the table row with the mouse.
 
     \item In the \textsc{Data Tree}, go to \textbf{Images $\rightarrow$ 
-Infrared $\rightarrow$ 2MASS} and load the 2MASS colour image. If the box next 
-to the DSS image is ticked, you can use the opacity slider 
-\includegraphics[width=0.035  
-\textwidth]{../images/aladin_button_opacity.png} next to the 2MASS plane in the 
-image stack to change its opacity and thus compare it to the 
-DSS image. Note that the different layers in the stack are displayed in the 
-main window as if you are looking through the stack from top to bottom. Hence, 
-if  you wanted to overlay the DSS image on the 2MASS image, you would have to 
-change their order in the stack by drag-and drop. 
+Infrared $\rightarrow$ 2MASS} and load the 2MASS colour image. To so click on 
+the 2MASS colour image entry and the loading window appears (see 
+Figure~\ref{fig:aladin_load_2mass}). In the loading window, check that the box 
+for progressive loading is ticked \includegraphics[width=0.07   
+\textwidth]{../images/aladin_load_progessive.png} and load the image by 
+clicking \textbf{Load}  \includegraphics[width=0.07   
+\textwidth]{../images/aladin_load_load.png}.
 
 \begin{figure}[H]
     \center
@@ -398,6 +412,21 @@ change their order in the stack by drag-and drop.
     \label{fig:aladin_load_2mass}
 \end{figure}
 
+    \item Once the 2MASS image is loaded in appears in the stack, which is 
+    located to the right of the main viewing window. The stack informs you of 
+    all planes that are currently loaded into \aladin. These layers are shown 
+    in the main viewing window as if you were looking from top to bottom 
+    through the stack. Now being most recently loaded, the 2MASS plane is shown 
+    as the "background" image in the main viewing window. If you now want to go 
+    back to the DSS colour image being the "background" image, tick the little 
+    grey box next to the DSS image entry in the stack. If you now use the 
+    opacity slider \includegraphics[width=0.035  
+    \textwidth]{../images/aladin_button_opacity.png} next to the 2MASS plane in 
+    the image stack, you can change opacity of the 2MASS plane and thus compare 
+    it easily to the DSS image. If you wanted to overlay the DSS image on the 
+    2MASS image, you would have to change their order in the stack by drag-and 
+    drop. 
+
     \item Now add more colour images form the \textsc{Data Tree}, for example 
 the allWISE (infrared) and the XMM Newton (X-rays) colour images. Compare the 
 images in a number of different ways:
@@ -405,10 +434,12 @@ images in a number of different ways:
         \item Multiview: \textbf{View $\rightarrow$ Create one view per image}, 
         or via the \textbf{multiview} icon at the bottom left of the \aladin\ 
         image window \includegraphics[width=0.1 
-        \textwidth]{../images/aladin_button_multiview.jpg}.
+        \textwidth]{../images/aladin_button_multiview.jpg}. After selecting 
+        e.\,g. the four by four grid drag and drop the images into the panels, 
+        where you want to see them. 
         \item Align and scale all images by using the \textbf{match} icon below 
         the image window \includegraphics[width=0.04  
-        \textwidth]{../images/aladin_button_match-views.jpg}
+        \textwidth]{../images/aladin_button_match-views.jpg}. 
         \item Transparency overlays: return to single view mode. Change the 
         transparency of planes in the stack with the opacity sliders         
         \includegraphics[width=0.04  
@@ -416,6 +447,74 @@ images in a number of different ways:
         that you can move the location of the planes in the stack and thus 
         change the order in which the image are shown.
     \end{itemize}
+    
+    \item All the colour images we have loaded so far are pre-computed.
+\aladin\ also allows you to compute your own RGB colour images:
+     \begin{itemize}
+         \item For this task, we need fits images rather the HiPS tiles we have 
+         worked with so far. Those fits images may come from your own data or 
+         from the Virtual Observatory. We will now search and load images at 
+         the location of the Antennae galaxies from the VO. 
+         \item First, we look for a far-ultraviolet image from 
+         \textit{GALEX}, enter "GALEX Atlas of nearby galaxies" in the 
+         \textbf{Select} line below the 
+         \textsc{Data Tree} \includegraphics[width=0.17  
+         \textwidth]{../images/aladin_select_GALEX.png}. In the \textsc{Data 
+         Tree} you will find the entry "GALEX Atlas of nearby galaxies" under 
+         \textbf{Others} $\rightarrow$ \textbf{SIA (image)} $\rightarrow$ 
+         \textbf{mast.stsci}. Load this entry \textbf{in view} 
+         \includegraphics[width=0.07 
+         \textwidth]{../images/aladin_load_inview.png}. A table appears in the 
+         stack. 
+         \item The newly loaded table contains a row for every image available 
+         from this image service in the vicinity of NGC\,4039. Find the entry 
+         for the file "h\_ngc4038-fd-int.fits.gz" and click on the URL in the 
+         first column. This will load the corresponding fits image into your 
+         stack. 
+%         \item Empty the \textbf{Select} line and repeat the steps from above 
+%         to load a $R$-band image from the Digitised Sky Survey: go to 
+%         \textbf{Others} $\rightarrow$ \textbf{SIA (image)} $\rightarrow$ 
+%         \textbf{eso.org} and load the table of observations of the 
+%         \textbf{Digitized Sky Survey}. In the newly loaded table select the 
+%         row with "SurveyName" "DSS2-red" and load the corresponding image 
+%         from 
+%         the URL in the first column. 
+         \item Next, we are after an infrared image: search for "2MASS large 
+         galaxy atlas" in the \textbf{Select} line, load the table from 
+         \textbf{Others} $\rightarrow$ \textbf{SIA (image)} $\rightarrow$ 
+         \textbf{irsa.ipac} and select any one of the three entries in the 
+         table to load into the stack.
+         \item Finally let's add an X-ray image to the collection: search for 
+         "XMM-Newton Pointed" in the \textbf{Select} line, load the table from 
+         \textbf{Others} $\rightarrow$ \textbf{SIA (image)} $\rightarrow$ 
+         \textbf{esavo} and select the observation with the longest "Duration".
+         \item To create the RGB image, open the \textbf{RGB image generator} 
+         with \includegraphics[width=0.04  
+         \textwidth]{../images/aladin_button_rgb.png} (see 
+         Figure~\ref{fig:aladin_rgb_generator}). Enter the images you want to 
+         use for each colour component and click
+     \end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[H]{0.4\textwidth}
+        \center
+        \includegraphics
+        [width=\textwidth]
+        {../images/aladin_rgb_window.png}
+        \caption{The RGB image generator window. }
+           \label{fig:aladin_rgb_generator}
+       \end{subfigure}
+       \centering
+       \begin{subfigure}[H]{0.4\textwidth}
+           \center
+           \includegraphics[width=1 
+           \textwidth]{../images/aladin_results_rgb_image.png}
+           \caption{The resulting RGB image for the Antennae galaxies. }
+           \label{fig:rgb_image}
+       \end{subfigure}
+       \caption{Creating RGB images in \aladin.}
+   \end{figure}     
 
     \item Search for more data from the VO on NGC4039:
     \begin{itemize}
@@ -464,7 +563,7 @@ advantages of these two data structures to easily asses which galaxies in the
 Arp catalogue of peculiar galaxies have been observed by SDSS and GALEX. If you 
 would like to have an overview of currently available HiPS, have a look at 
 \hyperref[https://aladin.u-strasbg.fr/hips/list]{\textcolor{blue}
-	{https://aladin.u-strasbg.fr/hips/list}}. You can load any of the in 
+	{https://aladin.u-strasbg.fr/hips/list}}. You can load any of them in 
 \aladin\ by entering their base URL in the \textbf{Command} line.  
 
 \begin{itemize}
@@ -509,11 +608,11 @@ right of the main viewing window.
 \label{fig:intersec}
 \end{figure}
 
-    \item Load the full Webb 1996 Arp catalog that you saved earlier. You 
+    \item Load the full Webb 1996 Arp catalogue that you saved earlier. You 
 can do this in one of the following three ways:
     \begin{itemize}
         \item \textbf{File $\rightarrow$ Load local file... }.
-        \item Drag and drop on the images.
+        \item Drag and drop on the stack.
         \item Broadcast the catalogue from the \vizier\ page that shows the 
         HTML version of the table or \textbf{MyData} area of the CDS Portal. To 
         do so click on \includegraphics[width=0.035\textwidth]
@@ -529,15 +628,18 @@ Alternatively you can download the catalogue from \vizier\ through the
 \textsc{Data Tree}, select the "arplist" table and \textbf{Load} the 
 \textbf{Whole data}. 
 
-    \item Filter the catalog to select only the sources that fall within 
+    \item Filter the catalogue to select only the sources that fall within 
 the SDSS+GALEX MOC: \textbf{Coverage $\rightarrow$ Filter a table by 
-MOC...}: 425 sources are selected. Note that you can also filter a table by MOC 
+MOC...}: 425 sources are selected. You can find the number for example in the 
+little information text that appears on the top of the stack when hovering the 
+mouse over an entry in the stack. Note that you can also filter a table by MOC 
+\includegraphics[width=0.09\textwidth]{../images/aladin_load_byMOC.png}
 when loading the table initially (instead of loading the entire table). 
 \begin{figure}[H]
 \center
 \includegraphics[width=0.4 
 \textwidth]{../images/aladin_moc_filter-tab-by-moc.jpg}
-\caption{Filtering a catalog by a MOC}
+\caption{Filtering a catalogue by a MOC}
 \label{fig:filtermoc}
 \end{figure}
 
@@ -563,12 +665,12 @@ sources by extracting small images from the SDSS survey:
 \begin{figure}[H]
 \center
 \includegraphics[width=0.4 \textwidth]{../images/aladin_filter_mag.jpg}
-\caption{Filtering a catalog by magnitude}
+\caption{Filtering a catalogue by magnitude}
 \label{fig:filtermag}
 \end{figure}
 \item Make thumbnails of the selected brightest sources: \textbf{Tool 
 $\rightarrow$ Thumbnail view generator...}, set the thumbnail size to 
-11\,arcmin. 
+14\,arcmin. 
 \begin{figure}[H]
 \center
 \includegraphics[width=0.6\textwidth]{../images/aladin_thumbnails.png}
@@ -578,24 +680,77 @@ $\rightarrow$ Thumbnail view generator...}, set the thumbnail size to
 \end{itemize}
 
 
+\section{Automation [Optional]}
+When samples become larger, it is useful to automatise some tasks. In this 
+optional section we will explore how to execute some tasks with 
+scripts. 
 
-\section{Compare Arp's peculiar galaxies to the broader galaxy population}
+\subsection{Collect information on a sample of galaxies using \aladin}
 
+Use an \aladin\ script to obtain DSS and SDSS image with HST, Chandra, ESO 
+observation log overlays for each of the selected bright galaxies.
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 \begin{itemize}
-	\item load the sample and aperture photometry list of the Dustpedia 
-	catalogue (Clark et al) cross-match them, use the advanced options to not 
-	keep all of the columns. Only keep Name RAJ200, DEJ2000 from either of the 
-	tables, FNUV, Fr and FKs from the apphot and Distcorr from the sample 
-	table. 
-	\item add columns: NUV-r colour, expression: \\
-	 \texttt{\$\{FNUV\}/\$\{Fr\}}, $\rightarrow$ convert to mags first
-	Kabs, expression: \\
-	\texttt{-2.5*log(\$\{FKs\}/666.7)-5*(log(\$\{Distcorr*1000000\})-1)}
-	\item plot and marvel
-	\item find out how to adjust the x and y axis range independently otherwise 
-	things seem to work nicely :) 
-	
+    \item Copy the script Arp\_script.ajs from the url \\
+    \url{http://cds.unistra.fr/tutorials/CDS-tutorial/Arp_script.ajs} \\
+     to your computer. The content of the script is shown in Figure 
+    \ref{fig:script}. 
+    \item Create a folder called `Arp' and edit the script Arp\_script.ajs to 
+    insert a path in order to save the output files, e.g. $\sim$/Desktop/Arp.
+    \item Open the \aladin\ macro controller and load the script:\\
+    - \textbf{Tools $\rightarrow$ Macro Controller} then \textbf{File 
+    $\rightarrow$ Load script}\\
+    - or cut and paste the script into the top panel of the \textsc{Macros} 
+    window.
+    \item Select all the sources in the bright galaxy catalog:\\
+    - Right click on the plane and \textbf{Select all objects in the selected 
+    planes}\\
+    - In the \textsc{Macros} window: \textbf{File $\rightarrow$ Use selected 
+    plane sources as params}.\\
+    - Note how the catalogue columns are shown as parameters which can be 
+    referred to as \$1, \$2, etc within the script.
+    \item Click on the first row of the parameters table and execute the 
+script 
+    for this row: \textbf{Exec current params}.
+    \item Optional: add an SDSS image: remove the `\#' to enable download of a 
+    SDSS g-band image for each source. Note that this results in an 
+    \textbf{Could not find any data corresponding to your request} message for 
+    objects not covered by SDSS.
+    \item Inspect the output in the \aladin\ window and also the files written 
+    in the Arp folder.
+    \item Execute the script for all sources: \textbf{Exec all from current}.
+    \item Note that the saved stack files can simply be dragged and dropped 
+    into \aladin\ for inspection.
 \end{itemize}
+
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.38 \textwidth]
+    {../images/aladin_macrocontroller_cdstutorial.jpg}\hspace{0.3cm}\includegraphics[width=0.6
+     \textwidth]
+     {../images/aladin_script_arp.jpg}
+    \caption{\textsc{Macros} window \& Arp\_script.ajs }
+    \label{fig:script}
+\end{figure}
+
+\subsection{Visualise the distribution of Arp's galaxies on the Sky}
+The scripting language Python is becoming more and more widely used by 
+Astronomers. Consequently, more and more Virtual Observatory services are 
+available through Python. To explore some of the features that Python can 
+provide today, a Jupyter notebook was prepared. These notebooks allow 
+interactive execution of Python code. Go now to\\
+\url{https://mybinder.org/v2/gh/kathl/CDS-tutorial/master}\\
+and wait a moment for everything to load. You should then see a page as shown 
+in Figure~\ref{fig:notebook}. Click on the link to "CDS tutorial.ipynb" and 
+follow the instructions there.
+
+\begin{figure}[H]
+    \center
+    \includegraphics[width=0.7 \textwidth]  
+    {../images/jupyter_open-notebook.png}
+    \caption{The entry point to the Jupyter notebook. }
+    \label{fig:notebook}
+\end{figure}
 
 \end{document}
 

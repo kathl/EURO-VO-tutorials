@@ -693,8 +693,8 @@ observation log overlays for each of the selected bright galaxies.
 \begin{itemize}
     \item Copy the script Arp\_script.ajs from the url \\
     \url{http://cds.unistra.fr/tutorials/CDS-tutorial/Arp_script.ajs} \\
-     to your computer. The content of the script is shown in Figure 
-    \ref{fig:script}. 
+     to your computer or create a new file with the script shown at the end
+    of this section.
     \item Create a folder called `Arp' and edit the script Arp\_script.ajs to 
     insert a path in order to save the output files, e.g. $\sim$/Desktop/Arp.
     \item Open the \aladin\ macro controller and load the script:\\
@@ -722,16 +722,45 @@ script
     \item Note that the saved stack files can simply be dragged and dropped 
     into \aladin\ for inspection.
 \end{itemize}
+This is the script:
+\begin{verbatim}
+#AJS
+#
+reset
+grid on
 
+# DSS image:
+"ARP-$2_DSS" = get DSS.STScI(POSS2UKSTU_Red,15,15) $3
+
+# SDSS image:
+# "ARP-$2_SDSS" = get SDSS(keyword=Filter g) $3
+
+# SIMBAD plane
+# "ARP-$2_Simbad" = get Simbad $3 5'
+
+# Observation Logs
+viz_logHST=get vizier(logHST) $3
+viz_logESO=get vizier(logESO) $3
+viz_logChandra=get vizier(logChandra) $3
+
+sync
+pause 1
+
+# Write results to files
+# export B/hst/hstlog /Path/To/Datafolder/Arp/Arp-$2_HST.xml
+save /Path/To/Datafolder/Arp/Arp-$2_chart.png
+backup /Path/To/Datafolder/Arp/Arp-$2_stack.aj
+#adapt ^^^^^^^^^^^^^^^^^^^ to your own path
+\end{verbatim}
 \begin{figure}[H]
     \center
     \includegraphics[width=0.38 \textwidth]
-    {../images/aladin_macrocontroller_cdstutorial.jpg}\hspace{0.3cm}\includegraphics[width=0.6
-     \textwidth]
-     {../images/aladin_script_arp.jpg}
+    {../images/aladin_macrocontroller_cdstutorial.jpg}
     \caption{\textsc{Macros} window \& Arp\_script.ajs }
     \label{fig:script}
 \end{figure}
+
+
 
 \subsection{Visualise the distribution of Arp's galaxies on the Sky}
 The scripting language Python is becoming more and more widely used by 

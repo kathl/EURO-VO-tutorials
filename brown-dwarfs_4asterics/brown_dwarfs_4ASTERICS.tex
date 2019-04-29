@@ -92,7 +92,8 @@ Brown dwarfs are objects occupying the gap between the least massive
 stars and the most massive planets. They are intrinsically faint objects so 
 their detection is not straightforward and, in fact, was almost impossible 
 until the advent of global surveys at deep optical and near-infrared bands like 
-SDSS, 2MASS or DENIS among others. We propose here to mine the 2MASS-PSC and 
+SDSS, 2MASS or DENIS among others. We propose here to mine the 2MASS point 
+source catalogue (2MASS-PSC) and 
 SDSS-DR9 databases to identify T-type brown dwarfs through an appropriate
 combination of colours in the optical and the infrared, an approach that 
 perfectly fits into the Virtual
@@ -139,7 +140,8 @@ around RA:~08h30m, DEC:~01d30m with a 14\,arcmin radius.
     to tick \textbf{in view} \includegraphics[width=0.1 
     \textwidth]{../images/aladin_load_inview.png} and \textbf{Load} the data 
     \includegraphics[width=0.1 
-    \textwidth]{../images/aladin_load_load.png}. This will load a catalogue of 
+    \textwidth]{../images/aladin_load_load.png} (see 
+    Figure~\ref{fig:load_2mass_aladin}). This will load a catalogue of 
     approximately 1000 sources (\aladin\ will give you the number of rows of a 
     catalogue when hoovering over the entry of the catalogue in the stack on 
     the right of the main viewing window). You can change the appearance and 
@@ -178,7 +180,8 @@ the 2MASS-PSC and SDSS-DR9 catalogues.
     \textbf{Catalog} $\rightarrow$ \textbf{Cross match objects ...}. 
     \item In the \textbf{Catalog Cross-match tool} enter the two catalogues and 
     their coordinate columns, keep the default threshold for source separation 
-    ($0 \le $ threshold $\le 4$) and select \textbf{Best matches}. Make sure 
+    ($0 \le $ threshold $\le 4$) and select \textbf{Best matches} (see 
+    Figure~\ref{fig:crossmatch_2mass_sdss_aladin}). Make sure 
     that the catalogue with the smaller number of sources is named in the first 
     line. Then hit \textbf{Perform cross-match}. A new plane called "XMatch" 
     will appear in the stack. It contains almost as many sources as the 
@@ -229,7 +232,7 @@ are expected from brown dwarfs.
 
 Now that we have limited our sample to point sources according to the 
 SDSS data, we move on to select brown dwarf candidates. Brown dwarfs are 
-cool objects so they are not detected in the blue SDSS bands), we therefore 
+cool objects so they are not detected in the blue SDSS bands. We therefore 
 select sources with no detection in the $u$ and $g$ SDSS bands \texttt{(u > 
 22.0 \&\& g >22.2}. We furthermore search for sources fulfilling the brown 
 dwarf criteria provided by Burgasser et al. (2000, ApJ, 531, L57): 
@@ -299,9 +302,10 @@ around RA:~08h30m, DEC:~01d30m with a 14\,arcmin radius.
     "V\_139\_SDSS9" with 12,404 sources into the \topcat\ main window. 
     \item Alternatively, you could broadcast the 2MASS and SDSS DR9 catalogs 
     from \aladin\ to \topcat\ using SAMP (Simple Application Messaging 
-    Protocol): In \aladin, right-click on the “2MASS-PSC” plane in the stack. 
+    Protocol): In \aladin, right-click on the "2MASS-PSC" plane in the stack. 
     Then select \textbf{Broadcast selected tables to ...} $\rightarrow$ 
-    \textbf{topcat}. The table should appear in the \topcat\ main window. Use 
+    \textbf{topcat} (see Figure~\ref{fig:broadcast_aladin_topcat}). The table 
+    should appear in the \topcat\ main window. Use 
     the same approach for the SDSS DR9 sources.
     \begin{figure}[H]
         \center
@@ -319,7 +323,8 @@ sources in the 2MASS-PSC and SDSS-DR9 catalogues.
     the menu in the main window to \textbf{Joins} $\rightarrow$ \textbf{Pair 
     Match} or simply using the \includegraphics[width=0.04 
     \textwidth]{../images/topcat_button_xmatch.jpg} button. 
-    \item In the \textbf{Match Tables} window set the following parameters:
+    \item In the \textbf{Match Tables} window set the following parameters (see 
+    Figure~\ref{fig:crossmatch_topcat}):
     \begin{itemize}
         \item In the Match criteria box:\\
         Algorithm: Sky\\
@@ -349,7 +354,8 @@ cross-match catalogue that are SDSS point sources and have characteristics that
 are expected from brown dwarfs. 
 \begin{itemize}
     \item Again, we first remove all sources that not SDSS point sources. To do 
-    so open the \topcat\ subset window by either following the menu in the main 
+    so select the "match(1,2)" table and then open the \topcat\ subset window 
+    by either following the menu in the main 
     window to \textbf{Views} $\rightarrow$ \textbf{Rows Subsets} or use the 
     \includegraphics[width=0.04 
     \textwidth]{../images/topcat_button_subset.jpg} button. 
@@ -377,8 +383,9 @@ are expected from brown dwarfs.
     options:
     \begin{itemize}
         \item Go back to the \textbf{Row Subset} window of the match(1,2) table 
-        (that is mentioned in the line below the buttons). Add a second subset 
-        with:\\
+        (which table the window is working on is mentioned in the line below 
+        the buttons). Add a second subset 
+        with (see Figure~\ref{fig:filtering_topcat}):\\
         Subset Name: filt2\\
         Expression: \texttt{cl==6 \&\& umag>22.0 \&\& gmag> 22.2 \&\& 
         Jmag-Hmag<0.3 \&\& Hmag-Kmag<0.3}\\
@@ -427,7 +434,7 @@ are expected from brown dwarfs.
 \section{Advanced Scripting in \aladin}
 \aladin\ has a script mode to build a list of commands to be processed. The 
 workflow can be executed automatically for a list of targets. If you closed 
-\aladin\, launch it again (\texttt{java -jar Aladin.jar \&}). If your \aladin\ 
+\aladin\, launch it again (\texttt{java -jar Aladin.jar \&}). If \aladin\ 
 is open, click on any plane, click right mouse button and select "Delete all 
 planes" (to clean up a little bit before we move on). 
 \newpage
@@ -449,7 +456,7 @@ editor and save them. The content of the script file looks as follows:\\
 \verb|filter candidates { ${cl_tab2}==6 && ${umag_tab2}>22.0 && |\\
 \verb|    ${gmag_tab2}>22.2 && ${Jmag_tab1}-${Hmag_tab1}<0.3 &&|\\
 \verb|    ${Hmag_tab1}-${Kmag_tab1}<0.3 {draw} }|\\
-\verb|#(this is a single line, remove the tabs and linebreaks)|\\
+\verb|#(the 3 lines above are 1 single line, remove the tabs and linebreaks)|\\
 \verb|sync|\\
 \verb|select 2massdss|\\
 \verb|sync|\\

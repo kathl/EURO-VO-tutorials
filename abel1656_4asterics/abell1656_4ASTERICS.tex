@@ -102,15 +102,19 @@ Goal:
 \section{Display the region of Abell 1656 in \aladin}
 
 \begin{itemize}
+\item Launch \aladin: Open a terminal and type: \texttt{java -jar Aladin.jar 
+\&}.
 \item In \aladin, enter `A1656' (Coma Cluster) in the \textbf{Command} slot of 
-the main window.
+the main window. \\
+\includegraphics[width=0.2 \textwidth]{../images/aladin_command_empty.png}
 \item Zoom/unzoom to work with galaxies in a region of about 40 by 40\,arcmin 
 around the Coma cluster. At the distance of Coma, 40\,arcmin corresponds to 
 1.1\,Mpc (with H$_0$=71~$\kms$~Mpc$^{-1}$, $\Omega_\Lambda$=0.73 and 
 $\Omega_m$=0.27), a region large enough for our purposes. Tip: 
 The cyan/blue numbers at the bottom of the main viewing window and in the 
 overview panel in the bottom right corner of \aladin\ indicate the area shown 
-in the main viewing window. As a second option draw a 40' long arrow with the 
+in the main viewing window (Figure~\ref{fig:aladinA1656}). As a second option 
+draw a 40' long arrow with the 
 \textbf{dist} button \includegraphics[width=0.03  
 \textwidth]{../images/aladin_button_distance.png}. 
 \end{itemize}
@@ -118,7 +122,7 @@ in the main viewing window. As a second option draw a 40' long arrow with the
 
 \begin{figure}[H]
 \center
-\includegraphics[width=0.6 \textwidth]{../images/aladin_a1656_new.png}
+\includegraphics[width=0.85 \textwidth]{../images/aladin_a1656_new.png}
 \caption{Abell 1656 (Coma Cluster) in \aladin}
 \label{fig:aladinA1656}
 \end{figure}
@@ -129,15 +133,16 @@ in the main viewing window. As a second option draw a 40' long arrow with the
 \item Load the SDSS-DR9 catalogue through the \datatree: Type "SDSS" in the 
 \textbf{Select} line below the \datatree\ to limit the resources shown in the 
 \datatree\ to those connected to SDSS \includegraphics[width=0.2 
-\textwidth]{../images/aladin_select_SDSS.png}. You can further restrict your 
-search by restricting \textbf{from} which collection you would like to choose 
-your data source \includegraphics[width=0.2 
+\textwidth]{../images/aladin_select_SDSS.png}. You can further narrow down your 
+search by restricting the collection of data sets with \textbf{from}  
+\includegraphics[width=0.2 
 \textwidth]{../images/aladin_selectfrom_largecatalogues.png}. More complex 
 filters can be created by clicking on \includegraphics[width=0.03 
 \textwidth]{../images/aladin_button_filtertree.png}. Under "Catalog" 
 $\rightarrow$ "VizieR" $\rightarrow$ "II-Photometric Data" click on SDSS-DR8, 
 make sure that the \textbf{in view} box is ticked \includegraphics[width=0.07 
-\textwidth]{../images/aladin_load_inview.png} and click \textbf{Load}.
+\textwidth]{../images/aladin_load_inview.png} and click \textbf{Load} 
+(Figure~\ref{fig:aladinSDSS}).
 
 \begin{figure}[H]
 \center
@@ -146,17 +151,17 @@ make sure that the \textbf{in view} box is ticked \includegraphics[width=0.07
 \caption{The \aladin\ \datatree\ when filtered to "SDSS" resources in "large 
 catalogues". Green resources have entries in the area of the sky that is 
 currently shown in the main viewing window, orange ones not. The grey pop-up 
-window allows you to load different data products, e.\,g. load all data within 
-the field of view or filter the catalogue by MOC. }
+window allows you to load the data in different ways, e.\,g. load all data 
+within the field of view or filter the catalogue by MOC. }
 \label{fig:aladinSDSS}
 \end{figure}
 
-\item Catalogue data of approximately 50,000 sources has been loaded. To 
+\item Catalogue data of approximately 50,000 sources have now been loaded. To 
 limit this sample to galaxies (cl=3) that are also SDSS primary sources 
-(mode=1) we continue as follows:
+(mode=1) we continue as follows (Figure~\ref{fig:aladinfilter}):
 \begin{itemize}
-    \item In the main \aladin\ window, select the catalogue plane, click on the 
-    \textbf{Filter} button  \includegraphics[width=0.04  
+    \item In the \aladin\ stack (right), select the catalogue plane, click on 
+    the \textbf{Filter} button  \includegraphics[width=0.04  
     \textwidth]{../images/aladin_button_filter.png} and write the following 
     syntax in the \textbf{Advanced mode} tab: \newline
     \texttt{\$\{cl\}=3\&\&\$\{mode\}=1\{draw\}} \newline
@@ -179,12 +184,12 @@ limit this sample to galaxies (cl=3) that are also SDSS primary sources
 \item Rename this new plane SDSSgalaxies using the \textbf{Properties} button  
 \includegraphics[width=0.03
 \textwidth]{../images/aladin_button_properties.png}. Depending on your field of 
-view the new filtered catalogue can still include as many as 36,000 sources.
+view the new filtered catalogue includes around 35,000 sources.
 
 \item Broadcast the filtered catalogue to \topcat. You can do so by 
-right-clicking on the catalogue plane and selecting \textbf{Broadcast select 
-table to...$>$ topcat}. Beware that \topcat\ must be launched for this function 
-to be enabled.  
+right-clicking on the catalogue plane and selecting \textbf{Broadcast selected 
+tables to...$>$ topcat}. Beware that \topcat\ must be launched for this 
+function to be enabled.  
 
 \begin{figure}[H]
 \center
@@ -193,14 +198,14 @@ to be enabled.
 \label{fig:topcatbroadcast}
 \end{figure}
 
-\item In \topcat, display the column metadata  \includegraphics[width=0.04  
-\textwidth]{../images/topcat_button_metadata.jpg}, deselect all   
+\item In \topcat, display the column metadata with \includegraphics[width=0.04  
+\textwidth]{../images/topcat_button_metadata.jpg}. In the new window, deselect 
+all rows    
 \includegraphics[width=0.04  \textwidth]{../images/topcat_button_invisible.jpg} 
-and 
-select  \includegraphics[width=0.04  
+and then select  \includegraphics[width=0.04  
 \textwidth]{../images/topcat_button_select.jpg} 
-only the four columns needed: RA\_ICRS (\$10), DE\_ICRS (\$11), zsp (\$12) and 
-rmag (\$17).
+only the four necessary columns: RA\_ICRS (\$10), DE\_ICRS (\$11), zsp (\$12) 
+and rmag (\$17).
 \end{itemize}
 
 \section{Identify the brightest sources as being stars contaminating the sample}
@@ -208,10 +213,9 @@ rmag (\$17).
 \begin{itemize}
 \item In the main \topcat\ window, open the subset window  
 \includegraphics[width=0.04  \textwidth]{../images/topcat_button_subset.jpg} 
-and build 
-a subset of the brightest sources (with magnitudes rmag$<$11.5):
+and build a subset of the brightest sources (with magnitudes rmag$<$11.5):
 \begin{itemize}
-    \item Click on  \includegraphics[width=0.04  
+    \item In the subset-window, click on \includegraphics[width=0.04  
     \textwidth]{../images/topcat_button_add.jpg}  to define a new row subset.
     \item \textbf{Subset name}: `stars'.
     \item \textbf{Expression}: \texttt{\$17$<$11.5} or \texttt{rmag$<$11.5} 
@@ -257,7 +261,8 @@ subsample is indeed a star:
      \label{fig:topcat_activation}
 \end{figure}
 
-\section{Build a subset of galaxies with photometry (rPmag) and redshift (zsp) in SDSS}
+\section{Build a subset of galaxies with photometry (rmag) and redshift (zsp) 
+in SDSS}
 
 \begin{itemize}
 \item In the main \topcat\ window, open the subset window  
@@ -276,7 +281,8 @@ sample) and redshift information. This can be done with the subset expression:
 
 \begin{itemize}
 \item In \topcat, build the subset `nozsp17' that contains galaxies with 
-similar magnitude selection as before but no redshifts (use \texttt{!(zsp$>$0)} 
+the same magnitude selection as before but no redshifts (use 
+\texttt{!(zsp$>$0)} 
 instead of \texttt{zsp$>$0} in the above expression). Again depending on your 
 field of view the new subset contains between 100 and 200 entries.
 \item Select the subset `nozsp17' in \topcat\ main window, duplicate the table and rename the new table `nozsp17'.
@@ -335,7 +341,7 @@ cz:
 \end{itemize}
 \item Concatenate `zsp17' and match tables (\textbf{Joins $\rightarrow$ 
 Concatenate Tables}). Fill in the \textbf{Appended Table} tabs. The final 
-catalogue contains up to 700 galaxies.
+catalogue contains around to 700 galaxies.
 \begin{figure}[H]
 \center
 \includegraphics[width=0.3  
@@ -353,19 +359,23 @@ catalogue contains up to 700 galaxies.
 \item Isolate the main peak of Coma in the histogram by selecting the 
 appropriate region scrolling your mouse or playing with \textbf{Axes} 
 (\textbf{Range} tab) and \textbf{Bins} (\textbf{Bin size})  
-\includegraphics[width=0.1  \textwidth]{../images/topcat_set_axes-bins.jpg}
+\includegraphics[width=0.1  \textwidth]{../images/topcat_set_axes-bins.jpg} 
+(see Figure~\ref{fig:comapeak} for an example).
 \begin{figure}[H]
 \center
 \includegraphics[width=0.33  \textwidth]{../images/topcat_coma-velo-peak.jpg}
 \caption{Main peak of the Coma cluster.}
 \label{fig:comapeak}
 \end{figure}
-\item Build a new subset named `Coma' using the range of cz observed in the histogram (proceed as before to build new subsets).
+\item Build a new subset named `Coma' using the range of cz observed in the 
+histogram (proceed as before to build new subsets or once having zoomed in on 
+the Coma peak use this button: \includegraphics[width=0.03 
+\textwidth]{../images/topcat_button_selection-plot.png} ).
 \item Select this Coma subset in the main window of \topcat\ and open the 
 \textbf{Row Statistics} window  \includegraphics[width=0.04  
 \textwidth]{../images/topcat_button_stats.jpg}. You will find something like 
 $<$cz$>\approx$7000$\kms$ and SD$\approx$1000$\kms$ both in excellent agreement 
-with more refined analyses. 
+with more refined analyses (Figure~\ref{fig:topstats}). 
 \begin{figure}[H]
 \center
 \includegraphics[width=0.33  \textwidth]{../images/topcat_hist-stat_coma.jpg}
@@ -379,7 +389,7 @@ with more refined analyses.
 \begin{itemize}
 \item Go back to the \aladin\ window. Adjust the main viewing window such that 
 once again it is centred on "A1656" and has a field of view of approximately 
-$40\times$\,arcmin. 
+$40\times40$\,arcmin. 
 \item Type "HST" in the \textbf{Select} line and set \textbf{from} to "-\,-~all 
 collections~-\,-". Narrow down the search in the Data discovery Tree filter 
 window \includegraphics[width=0.03 
@@ -408,7 +418,8 @@ running).
 Manager} appears. Select \textbf{Display Spectrum} \includegraphics[width=0.2  
 \textwidth]{../images/cassis_button_display-spectrum.png}. The 
 spectrum is now displayed in the \cassis\ main window. Two lines are clearly 
-visible: one around 1250 Angstr\"om and one around 1350 Angstr\"om. 
+visible: one around 1250 Angstr\"om and one around 1350 Angstr\"om (see 
+Figure~\ref{fig:spectrum}). 
 
 
 \begin{figure}[H]
@@ -418,7 +429,8 @@ visible: one around 1250 Angstr\"om and one around 1350 Angstr\"om.
 \label{fig:spectrum}
 \end{figure}
 \item To check that these are hydrogen lines (Ly$\alpha$), one at the local 
-velocity, the other at the velocity of the Coma cluster:
+velocity, the other at the velocity of the Coma cluster 
+(Figure~\ref{fig:spectrum2}):
 \begin{itemize}
     \item Select the \textbf{Species} tab. Choose the \textbf{Full NIST} 
     database in the \textbf{Template} section.
@@ -448,7 +460,7 @@ mark the location of the Ly$\alpha$ line at a line of sight velocity of
 \item Go back to the \aladin\ window and centre the image on the pointing 
 centre of the HST spectral observations by double-clicking on the table row of 
 the source 1257-2840. Zoom in or out as necessary. 
-\item Make sure that the \textbf{Simbad Pointer} is activated (a tick next 
+\item Make sure that the \textbf{Simbad Pointer} is activated (a tick next to 
 \textbf{Tool} $\rightarrow$ \textbf{Simbad pointer}). 
 \item Hover over of the pointing centre of the HST spectral observations until 
 a small window appears. 
@@ -470,9 +482,10 @@ looking for A1656. The hierarchical link \includegraphics[width=0.07
 \end{itemize}
 
 \item Go back to \cassis\ and change the \textbf{Vlsr plot} field from 0 to 
-2.7e4\,$\kms$. As soon as you click \textbf{Display} again, the green tick 
+2.7e4\,$\kms$ (Figure~\ref{fig:spectrum3}). As soon as you click 
+\textbf{Display} again, the green tick 
 corresponding to the HI line moves right under the second fainter line in the 
-HST spectrum. This confirms that this line is associated to the Seyfert 1 
+HST spectrum. This confirms that this line is associated to this Seyfert 1 
 galaxy.
 \begin{figure}[H]
 \center
@@ -497,7 +510,17 @@ wavelength range:
 components using the \textbf{Manage Components} menu: a polynomial baseline and 
 a Gaussian line.
 \item Change the \textbf{degree} of the polynomial to ` 0 ' in order to fit a constant baseline.
-\item For the Gaussian component, the purple/blue fields should be filled with initial values in order to start the fitting procedure. They can be filled by hand but a useful way of filling them in is: use the middle button of your mouse to click and drag the region of the line or alternatively with a trackpad press both ctrl+alt and click and drag to draw the region. Beware that the Gaussian parameters should stay violet/blue (do not click on any of them) if you want them to fill in automatically. The position of the peak (\textbf{xo}), its height (\textbf{Io}) and the width of the line (\textbf{FWHM}) are estimated automatically from the selection. This selection, visible in purple/blue on Figure \ref{fig:specfit}, can be erased using the \textbf{reset} buttons in \textbf{Selections [with middle-click-and-drag}.
+\item For the Gaussian component, the purple/blue fields should be filled with 
+initial values in order to start the fitting procedure. They can be filled by 
+hand but a useful way of filling them in is: use the middle button of your 
+mouse to click and drag the region of the line or alternatively with a trackpad 
+press both ctrl+alt and click and drag to draw the region. Beware that the 
+Gaussian parameters should stay violet/blue (do not click on any of them) if 
+you want them to fill in automatically. The position of the peak (\textbf{xo}), 
+its height (\textbf{Io}) and the width of the line (\textbf{FWHM}) are 
+estimated automatically from the selection. This selection, visible in 
+purple/blue on Figure \ref{fig:specfit}, can be erased using the \textbf{reset} 
+buttons in \textbf{Selections [with middle-click-and-drag]}.
 \item Click on \textbf{Fit current} to perform a fit of the line+baseline. The different components of the fit can be selected or deselected in the \textbf{InfoPanel}.
 \item Go back to the \textbf{Fit} panel and note the central wavelength of this line as inferred from the best fit: 1327 Angstr\"om. 
 \begin{figure}[H]

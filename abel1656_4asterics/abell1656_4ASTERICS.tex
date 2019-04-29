@@ -1,6 +1,5 @@
 \documentclass [a4paper, 12pt]{article}
 
-\usepackage{hyperref}
 \usepackage{amssymb}
 \usepackage{epsfig}
 \usepackage{times}
@@ -10,12 +9,16 @@
 \usepackage[round,sort&compress]{natbib} 
 \usepackage{multicol}
 \usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
 \usepackage[ddmmyyyy]{datetime}
 \setlength\columnsep{6cm}
 \usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
 \setlength{\headsep}{1cm}
 \setlength{\footskip}{1cm}
 \setlength{\parindent}{1cm}
+
 \setlength{\bibsep}{-2pt}
 
 \def\LCDM{\mbox{$\Lambda$CDM}}
@@ -35,6 +38,8 @@
 \newcommand{\vizier}{{\textsc{v}izie\textsc{r}}}
 \renewcommand{\dateseparator}{.}
 \newcommand{\datatree}{\textsc{Data Tree}}
+
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 
@@ -100,7 +105,7 @@ Goal:
 \topcat\ and \cassis.
 
 \section{Display the region of Abell 1656 in \aladin}
-
+\label{sec:display}
 \begin{itemize}
 \item Launch \aladin: Open a terminal and type: \texttt{java -jar Aladin.jar 
 \&}.
@@ -352,7 +357,7 @@ catalogue contains around to 700 galaxies.
 \end{itemize}
 
 \section{Determine the cz distribution, $<$cz$>$ and dispersion in \topcat}
-
+\label{sec:det_cz}
 \begin{itemize}
 \item View the histogram of `czsp' values with  \includegraphics[width=0.06  
 \textwidth]{../images/topcat_button_histogram.jpg}
@@ -534,6 +539,34 @@ buttons in \textbf{Selections [with middle-click-and-drag]}.
 \item This value can be compared to the value given in \simbad.
 \end{itemize}
  
+\section{Scripting in a Jupyter notebook [optional]}
+
+The tasks in Sections~\ref{sec:display} to \ref{sec:det_cz} can also be carried 
+out using a Jupyter notebook. You can explore the notebook 
+here:\url{https://mybinder.org/v2/gh/kathl/Coma_cluster-tutorial/master} Wait a 
+moment 
+for everything to load. You should then see list of files. Click
+on the link to ”Abel1656\_for\_Asterics.ipynb” and follow the instructions 
+there.
+
+You can also download the Jupyter notebook from the github repository to your 
+machine. It was created to run with the following packages:
+\begin{itemize}
+    \item numpy (version 1.15.2, van der Walt et al., 2011, Computing in 
+    Science Engineering, 13, 22, https://www.numpy.org/)
+    \item matplotlib (version 3.0.0, Hunter, 2007, Computing in Science 
+    Engineering, 9, 90, https://matplotlib.org/)
+    \item seaborn (version 0.9.0, https://seaborn.pydata.org/)
+    \item ipyaladin (version 0.1.5, https://github.com/cds-astro/ipyaladin)
+    \item astropy (version 3.0.5, Astropy Collaboration et al., 2013, A\&A, 
+    558, 33, https://www.astropy.org/)
+    \item astroquery (version 0.3.8, Ginsburg et al., 2019, AJ, 157 98, 
+    https://astroquery.readthedocs.io/en/latest/)
+    \item ipywidgets (version 7.4.2, https://pypi.org/project/ipywidgets/)
+    \item widgetsnbextension (version 3.4.2, 
+    https://pypi.org/project/widgetsnbextension/)
+\end{itemize}
+
 %\bibliographystyle{unsrtnat} % Use the "unsrtnat" BibTeX style for formatting the Bibliography
 %\bibliography{Bibliography}
 

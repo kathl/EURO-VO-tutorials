@@ -38,7 +38,7 @@
 \newcommand{\simbad}{{\textsc{SIMBAD}}}
 \newcommand{\vizier}{{\textsc{v}izie\textsc{r}}}
 \renewcommand{\dateseparator}{.}
-
+\renewcommand\UrlFont{\color{blue}\rmfamily}
 
 \begin{document}
 
@@ -689,7 +689,6 @@ scripts.
 
 Use an \aladin\ script to obtain DSS and SDSS image with HST, Chandra, ESO 
 observation log overlays for each of the selected bright galaxies.
-\renewcommand\UrlFont{\color{blue}\rmfamily}
 \begin{itemize}
     \item Copy the script Arp\_script.ajs from the url \\
     \url{http://cds.unistra.fr/tutorials/CDS-tutorial/Arp_script.ajs} \\
@@ -768,31 +767,19 @@ Astronomers. Consequently, more and more Virtual Observatory services are
 available through Python. To explore some of the features that Python can 
 provide today, a Jupyter notebook was prepared. These notebooks allow 
 interactive execution of Python code. Go now to\\
-\url{https://mybinder.org/v2/gh/kathl/CDS-tutorial/master}\\
-and wait a moment for everything to load. You should then see a page as shown 
-in Figure~\ref{fig:notebook}. Click on the link to "CDS tutorial.ipynb" and 
-follow the instructions there.
+\url{https://mybinder.org/v2/gh/kathl/VOtutorials_with_Python/master}\\
+and wait a moment for everything to load. You should then see a list of files. 
+Click
+on the link to 
 
-\begin{figure}[H]
-    \center
-    \includegraphics[width=0.7 \textwidth]  
-    {../images/jupyter_open-notebook.png}
-    \caption{The entry point to the Jupyter notebook. }
-    \label{fig:notebook}
-\end{figure}
+\textbf{The\_CDS\_tutorial.ipynb}
 
-You can also download the Jupyter notebook from github repository to your 
-machine. It was created to run with the following packages:
-\begin{itemize}
-    \item ipyaladin (version 0.1.5, https://github.com/cds-astro/ipyaladin)
-    \item astropy (version 3.0.5, Astropy Collaboration et al., 2013, A\&A, 
-    558, 33, https://www.astropy.org/)
-    \item astroquery (version 0.3.8, Ginsburg et al., 2019, AJ, 157 98, 
-    https://astroquery.readthedocs.io/en/latest/)
-    \item ipywidgets (version 7.4.2, https://pypi.org/project/ipywidgets/)
-    \item widgetsnbextension (version 3.4.2, 
-    https://pypi.org/project/widgetsnbextension/)
-\end{itemize}
+\noindent and follow the instructions there. You can also download the Jupyter 
+notebook from the github repository to your 
+machine. It was created to run with the packages as listed in the 
+requirements.txt file. Using pip\footnote{\url{https://pip.pypa.io/en/stable/}} 
+you can install all these packages with the command \texttt{pip install [name 
+    of the package]}. 
 
 
 \end{document}

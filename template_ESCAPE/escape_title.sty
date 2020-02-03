@@ -1,0 +1,64 @@
+\ProvidesPackage{escape_title}[2020/01/31]
+\RequirePackage{graphicx}
+\RequirePackage[ddmmyyyy]{datetime}
+
+\ProcessOptions
+
+\newcommand{\makeescapetitle}{
+\thispagestyle{empty}
+\begin{center}
+    \includegraphics[width=0.3\textwidth]{../images/logo_euro.png} \hspace{5cm} \includegraphics[width=0.3 \textwidth]{../images/logo_escape.png}\\
+    \vspace{2.5cm}
+    \begin{large}
+        \textbf{Escape - an EU Horizon 2020 project - 824064} \\
+    \end{large}
+    \vspace{2.0cm}
+    \begin{Huge}
+    \textbf{\@title} \\
+    \end{Huge}
+    \vspace{2.0cm}
+    \begin{large}
+        \@author \\
+    \end{large}
+    \vspace{8cm}
+    last update \today \\
+\end{center}
+\vspace{3.5cm}
+Asterics template by Jenny G. Sorce, Escape extension by Katharina A. Lutz
+}
+
+
+\newcommand{\addescapehistory}{
+\begin{center}
+    \@author\\
+    \textit{\@title}
+    \vspace{0.5cm}
+\end{center}
+}
+
+\newcommand{\LCDM}{\mbox{$\Lambda$CDM}}
+\newcommand{\kms}{\rm km\ s^{-1}}
+\newcommand{\hkpc}{\mbox{$\rm h^{-1}$kpc}}
+\newcommand{\hMpc}{\mbox{$\rm h^{-1}$Mpc}}
+\newcommand{\hGpc}{\mbox{$\rm h^{-1}$Gpc}}
+\newcommand{\hMsun}{\mbox{$\rm h^{-1}$M$_\odot$}}
+\newcommand{\gtsim}{_ >\atop{^\sim}}
+\newcommand{\aladin}{{\textsc{A}{ladin}}}
+\newcommand{\topcat}{{\textsc{Topcat}}}
+\newcommand{\cassis}{{\textsc{Cassis}}}
+\newcommand{\simbad}{{\textsc{SIMBAD}}}
+\newcommand{\vizier}{{\textsc{v}izie\textsc{r}}}
+\newcommand{\datatree}{\textsc{Data Tree}}
+
+\renewcommand{\lesssim}{_ <\atop{^\sim}}
+\renewcommand{\dateseparator}{.}
+\renewcommand\UrlFont{\color{blue}\rmfamily}
+
+
+\setlength\columnsep{6cm}
+\setlength{\headsep}{1cm}
+\setlength{\footskip}{1cm}
+\setlength{\parindent}{1cm}
+\setlength{\bibsep}{-2pt}
+
+\endinput

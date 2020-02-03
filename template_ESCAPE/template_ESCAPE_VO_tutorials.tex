@@ -1,0 +1,68 @@
+\documentclass [a4paper, 12pt]{article}
+
+\usepackage{amssymb}
+\usepackage{epsfig}
+\usepackage{times}
+\usepackage{float}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{ragged2e}
+\usepackage[round,sort&compress]{natbib}
+\usepackage{multicol}
+\usepackage{pgfgantt}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage[ddmmyyyy]{datetime}
+\usepackage[top=2cm, bottom=2cm, left=2cm, right=2cm]{geometry}
+\usepackage{../template_ESCAPE/escape_title}
+
+
+\begin{document}
+%%%%%%%%%%%%%%
+% Title page %
+%%%%%%%%%%%%%%
+% First provide initial author and their affiliation as well as the
+% title of the tutorial
+\author{Jean Toutlemonde \& Jane Doe \\           % Authors
+The great space institute }       % Affiliation
+\title{Our awesome VO tutorial}   % Tutorial title
+\makeescapetitle
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%
+% Tutorial history %
+%%%%%%%%%%%%%%%%%%%%
+% For every notable step forward of this tutorial, provide the name of
+% the authors and their contribution here to track the development of the
+% tutorial. This is always followed by \addescapehistory, which will add
+% the information to the file.
+\author{Jean Toutlemonde \& Jane Doe}        % Author
+\title{Initial development of the tutorial}  % Contribution
+\addescapehistory
+\author{Erika Mustermann \& John Doe}
+\title{updated for the new software package}
+\addescapehistory
+% and so on and so forth
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%
+% Table of contents %
+%%%%%%%%%%%%%%%%%%%%%
+% Add a table of contents
+\tableofcontents
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main body of the tutorial %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Main body of the tutorial begins here. Generally the tutorials contain
+% an introduction, which details among other things the goals of this tutorial
+% and provide information on which software packages are required. Otherwise
+% the style is free and up to you.
+\section{Introduction}
+
+
+\end{document}

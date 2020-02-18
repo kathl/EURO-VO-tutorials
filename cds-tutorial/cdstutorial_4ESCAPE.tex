@@ -21,7 +21,7 @@
 \begin{document}
 % First provide initial author and their affiliation as well as the
 % title of the tutorial
-\author{Mark Allen and the CDS team \\      % Authors
+\author{Ada Nebot Gomez-Moran, Mark Allen and the CDS team \\      % Authors
 Centre de Donn\'ees astronomiques de Strasbourg, France}       % Affiliation
 \title{An introduction to the \\ CDS services and tools}   % Tutorial title
 \makeescapetitle
@@ -31,19 +31,21 @@ Centre de Donn\'ees astronomiques de Strasbourg, France}       % Affiliation
 % the authors and their contribution here to track the development of the
 % tutorial. This is always followed by \addescapehistory, which will add
 % the information to the file.
-\author{Mark Allen and the CDS team}   % Author
+\author{Ada Nebot Gomez-Moran, Mark Allen and the CDS team}   % Author
 \title{Initial development of the tutorial}  % Contribution
 \addescapehistory
 \author{Jenny G. Sorce}
 \title{updated with a new template for ASTERICS with the new CDS portal, new plots}
 \addescapehistory
 \author{Katharina A. Lutz}
-\title{updated to \aladin\ v10 and ESCAPE template}
+\title{updated to \aladin\ v10}
 \addescapehistory
 \author{Ada Nebot}
 \title{updated for VO school in Nice, November 2019}
 \addescapehistory
-
+\author{Katharina A. Lutz}
+\title{updated to \aladin\ v11 and ESCAPE template}
+\addescapehistory
 \newpage
 % Add a table of contents
 \tableofcontents
@@ -271,9 +273,7 @@ in the tutorial.
 
 \subsection{How does the data get into the CDS databases?}
 As you have seen in the last sections, the CDS databases (\simbad, \vizier, the
-HiPS server for images) host large amounts of a variety of data products. But
-how does the data published in papers find their way into the databases? At the
-CDS, about 12 documentalists work on curating data. This involves collecting
+HiPS server for images) host large amounts of a variety of data products. To provide these data to the astronomical community, about 12 data stewards curate the data. This involves collecting
 data from journal papers, receiving data directly from large surveys (such as
 e.\,g. Gaia), assessing and assuring the data quality and cross-matching
 sources described by newly published papers/data with sources already available
@@ -384,8 +384,7 @@ clicking \textbf{Load}  \includegraphics[width=0.07
     \textwidth]{../images/aladin_button_opacity.png} next to the 2MASS plane in
     the image stack, you can change opacity of the 2MASS plane and thus compare
     it easily to the DSS image. If you wanted to overlay the DSS image on the
-    2MASS image, you would have to change their order in the stack by drag-and
-    drop.
+    2MASS image, you would have to change their order in the stack by drag-and-drop.
 
     \item Now add more colour images form the \textsc{Data Tree}, for example
 the allWISE (infrared) and the XMM Newton (X-rays) colour images. Compare the
@@ -452,7 +451,7 @@ images in a number of different ways:
          with \includegraphics[width=0.04
          \textwidth]{../images/aladin_button_rgb.png} (see
          Figure~\ref{fig:aladin_rgb_generator}). Enter the images you want to
-         use for each colour component and click
+         use for each colour component and click \textbf{CREATE}.
      \end{itemize}
 
 \begin{figure}[H]
@@ -728,31 +727,11 @@ Astronomers. Consequently, more and more Virtual Observatory services are
 available through Python. To explore some of the features that Python can
 provide today, a Jupyter notebook was prepared. These notebooks allow
 interactive execution of Python code. Go now to\\
-\url{https://mybinder.org/v2/gh/kathl/CDS-tutorial/master}\\
-and wait a moment for everything to load. You should then see a page as shown
-in Figure~\ref{fig:notebook}. Click on the link to "CDS tutorial.ipynb" and
-follow the instructions there.
+\url{https://mybinder.org/v2/gh/cds-astro/tutorials/master?filepath=Notebooks}\\
+and wait a moment for everything. Click on the link to
 
-\begin{figure}[H]
-    \center
-    \includegraphics[width=0.7 \textwidth]
-    {../images/jupyter_open-notebook.png}
-    \caption{The entry point to the Jupyter notebook. }
-    \label{fig:notebook}
-\end{figure}
+\textbf{The_CDS_tutorial.ipynb}
 
-You can also download the Jupyter notebook from github repository to your
-machine. It was created to run with the following packages:
-\begin{itemize}
-    \item ipyaladin (version 0.1.5, https://github.com/cds-astro/ipyaladin)
-    \item astropy (version 3.0.5, Astropy Collaboration et al., 2013, A\&A,
-    558, 33, https://www.astropy.org/)
-    \item astroquery (version 0.3.8, Ginsburg et al., 2019, AJ, 157 98,
-    https://astroquery.readthedocs.io/en/latest/)
-    \item ipywidgets (version 7.4.2, https://pypi.org/project/ipywidgets/)
-    \item widgetsnbextension (version 3.4.2,
-    https://pypi.org/project/widgetsnbextension/)
-\end{itemize}
-
+and follow the instructions there. You can also download the Jupyter notebook from github repository to your machine. It was created to run with the packages as listed in the requirements.txt file. Using pip\footnote{\url{https://pip.pypa.io/en/stable/}} you can install all these packages with the command \texttt{pip install [name of the package]}.
 
 \end{document}
